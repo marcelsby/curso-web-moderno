@@ -1,4 +1,4 @@
-Array.prototype.map2 = function(callback) {
+Array.prototype.map2 = function (callback) {
     result = new Array
 
     for (i = 0; i < this.length; i++)

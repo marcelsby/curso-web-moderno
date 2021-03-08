@@ -10,7 +10,7 @@ function frageis (produto) {
     return produto.fragil
 }
 
-// Mesma coisa utilizando arrow function
+// Mesma coisa utilizando arrow function, apenas a condição mudou
 caros = produtos.filter(produto => produto.preco > 500)
 
 // Filtrando duas vezes - elementos frageis e baratos
