@@ -1,0 +1,15 @@
+* {
+    font-family: monospace, 'Times New Roman';
+}
+
+h1 {
+    font-size: 50px;
+}
+
+.fundoVermelho {
+    background-color: #C00; 
+}
+
+.negrito {
+    font-weight: bold;
+}

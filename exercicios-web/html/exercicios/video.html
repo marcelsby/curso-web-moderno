@@ -1,0 +1,58 @@
+<video id="meuVideo" width="800" height="450" controls controlslist="nodownload">
+    <source src="http://files.cod3r.com.br/curso-web/video.mp4" type="video/mp4">
+    Seu browser não suporta a tag de vídeo.
+</video>
+
+<div wm-progresso="meuVideo" class=progresso>
+    <div></div>
+</div>
+
+<div>
+    <button wm-play-pause="meuVideo">▶️</button>
+</div>
+
+<style>
+    .progresso {
+        height: 20px;
+        width: 500px;
+        border: solid 1px #444;
+        margin: 20px;
+    }
+
+    .progresso > div {
+        background-color: #F03;
+        color: #FFF;
+        height: 100%;
+        text-align: right;
+        font-size: 14px;
+        width: 0;
+    }
+</style>
+
+<script>
+    let playPauseButton = document.querySelector("[wm-play-pause]")
+    const videoId = document.querySelector("[wm-play-pause]").getAttribute("wm-play-pause")
+    const video = document.querySelector(`video#${videoId}`)
+    const barraDeProgresso = document.querySelector("[wm-progresso] > div")
+
+    setInterval(() => {
+        if (!video.ended && !video.paused) {
+            let duracao = video.duration
+            atualEmPorcentagem = (100 * video.currentTime) / duracao
+            console.log(atualEmPorcentagem)
+            barraDeProgresso.style.width = atualEmPorcentagem + "%"
+        } else if (video.ended) {
+            barraDeProgresso.style.width = 100 + "%"
+        }
+    }, 100)
+
+    playPauseButton.addEventListener("click", () => {
+        if (video.paused) {
+            video.play()
+            playPauseButton.innerHTML = "⏸️"
+        } else {
+            video.pause()
+            playPauseButton.innerHTML = "️️️️️▶️️️"
+        }
+    })
+</script>
