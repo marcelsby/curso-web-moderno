@@ -6,7 +6,6 @@
     <title>Texto</title>
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
     <style>
-        /* ... */
         * {
             margin: 0;
         }
@@ -15,6 +14,77 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+        }
+
+        html {
+            font-size: 28px;
+        }
+
+        div {
+            font-size: 50px;
+        }
+
+        p {
+            /* valores padrão */
+            font-size: 1em;
+            font-size: 100%;
+            font-size: 16px;
+            font-size: 12pt;
+
+            /* unidades absolutas */
+            font-size: 100px; /* tamanho do pixel é relativo */
+
+            /* os dois abaixo são equivalentes */
+            font-size: 72pt; /* pontos */
+            font-size: 1in; /* 1 polegada / 1 inch */
+
+
+            /* unidades relativas */
+            font-size: 2.2em;
+            font-size: 2.2rem;
+            font-size: 50vh; /* 50% da altura do viewport */
+            font-size: 10vw; /* 10% da largura do viewport */
+
+            /* tipografia */
+            font-family: monospace;
+            font-family: Georgia, serif;
+            font-family: Verdana, sans-serif;
+            font-family: 'Indie Flower', cursive;
+
+            /* propriedades das fontes */
+            font-weight: 100;
+            /* font-weight: bold; */
+            font-style: italic;
+            text-transform: lowercase;
+            /* text-decoration: overline underline line-through; */
+            word-spacing: 20px;
+            letter-spacing: 30px;
+            line-height: 2.5em;
+            text-align: center ;
+        }
+
+        .botao {
+            font-size: 2em;
+            text-decoration: none;
+            padding: 20px;
+            border-radius: 7px;
+            
+        }
+
+        .destaque {
+            background: #0F9D58;
+            color: #FFF;
+            box-shadow: 2px 1px #3333;
+        }
+
+        .botao:hover { 
+            background-color: #15ca73;
+            padding: 23px;
+        }
+
+        .botao:active {
+            background: #0F9D58;
+            padding: 20px;
         }
     </style>
 </head>
